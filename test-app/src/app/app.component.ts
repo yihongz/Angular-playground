@@ -1,5 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit } from '@angular/core';
-import { Component, DoCheck, OnInit } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnInit } from '@angular/core';
 /*
   DoCheck,
   AfterContentInit,
@@ -10,19 +9,25 @@ import { Component, DoCheck, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-  <app-title title="Hello world!"></app-title>
+  <app-title *ngIf="destruir" title="Hello world!"></app-title>
   {{ valor }}
   <button (click)="adicionar()">Adicionar</button>
+  <button (click)="destruirComponente()">Destruir componente</button>
   <router-outlet></router-outlet>`
 })
 export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
   public valor: number = 1;
+  public destruir: boolean = true;
   
   constructor() {
   }
 
   public adicionar(): number {
     return this.valor += 1;
+  }
+
+  public destruirComponente(): void {
+    this.destruir = false;
   }
 
   ngOnInit(): void {
