@@ -6,3 +6,9 @@
 <h2>Property biding</h2>
 <p><button [disabled]="checkedDisabled">Botão</button></p>
 <p><img [src]="imgSrc" [title]="imgTitle" [alt]="imgTitle"></p>
+<br/><hr><br/>
+<h2>Event biding</h2>
+<p><button (click)="alertaInfo($event)">Alerta</button></p>
+<br/>
+<div (mousemove)="mouseMoveTest($event)" style="background-color: red; height: 300px; width: 300px;"></div>
+<p>X: {{position.x}}, Y: {{position.y}}</p>
