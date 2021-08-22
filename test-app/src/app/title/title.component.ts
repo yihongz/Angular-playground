@@ -1,5 +1,4 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-
 @Component({
   selector: 'app-title',
   templateUrl: './title.component.html',
