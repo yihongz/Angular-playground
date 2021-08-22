@@ -10,6 +10,9 @@ export class DiretivasAtributosComponent implements OnInit {
   public valor:boolean = false;
   public h:string = '20px';
   public backgroundColor = 'green';
+  public nome:string = "";
+  public list:Array<{nome:string}> = [];
+
   constructor() { }
 
   ngOnInit(): void {
@@ -18,6 +21,10 @@ export class DiretivasAtributosComponent implements OnInit {
 
       this.h = this.h == '20px' ? '50px' : '20px';
     }, 2000)
+  }
+
+  adicionarNaLista(nome:string): void {
+    this.list.push({nome: nome});
   }
 
 }
