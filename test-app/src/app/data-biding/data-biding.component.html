@@ -12,3 +12,7 @@
 <br/>
 <div (mousemove)="mouseMoveTest($event)" style="background-color: red; height: 300px; width: 300px;"></div>
 <p>X: {{position.x}}, Y: {{position.y}}</p>
+<br/><hr><br/>
+<h2>Two-way biding</h2>
+<p><input [(ngModel)]="nome"></p>
+<p>{{ nome }}</p>
