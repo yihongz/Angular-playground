@@ -8,11 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class DiretivasAtributosComponent implements OnInit {
 
   public valor:boolean = false;
+  public h:string = '20px';
+  public backgroundColor = 'green';
   constructor() { }
 
   ngOnInit(): void {
     setInterval(() => {
       this.valor = this.valor ? false : true;
+
+      this.h = this.h == '20px' ? '50px' : '20px';
     }, 2000)
   }
 
