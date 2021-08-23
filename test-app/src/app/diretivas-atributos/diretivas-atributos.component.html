@@ -1,4 +1,6 @@
-<!--<div *ngIf="nome != 'denner'">
+<ng-content select="h1"></ng-content>
+
+<div *ngIf="nome != 'denner'">
     <p [ngClass]="{'active': valor, 'disabled': !valor}">NgClass</p>
     <p [ngStyle]="{'height': h, 'background': backgroundColor}">NgStyle</p>
 </div>
@@ -10,8 +12,9 @@
 
 <ul>
     <li *ngFor="let item of list">{{item.nome}}</li>
-</ul>-->
+</ul>
 
-<ng-template ngFor let-item [ngForOf]="list">
+<ng-content select="hr"></ng-content>
+<!--<ng-template ngFor let-item [ngForOf]="list">
     <p>{{item.nome}}</p>
-</ng-template>
+</ng-template>-->
