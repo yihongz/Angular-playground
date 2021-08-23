@@ -2,9 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-  <app-input [contador]="addValue"></app-input>
-  <br/>
-  <button (click)="Add()">Adicionar</button>
+  <app-output></app-output>
   <router-outlet></router-outlet>`
 })
 export class AppComponent implements OnInit {
