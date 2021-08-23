@@ -11,7 +11,7 @@ export class DiretivasAtributosComponent implements OnInit {
   public h:string = '20px';
   public backgroundColor = 'green';
   public nome:string = "";
-  public list:Array<{nome:string}> = [];
+  public list:Array<{nome:string}> = [{nome: "Paulo"}, {nome: "Pedro"}];
 
   constructor() { }
 
