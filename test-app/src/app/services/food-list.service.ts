@@ -5,10 +5,14 @@ import { Injectable } from '@angular/core';
 })
 export class FoodListService {
   
-  public list: Array<string> = [
+  private list: Array<string> = [
     "Macarrão",
     "Arroz",
     "Feijão"
   ];
   constructor() { }
+
+  public foodList(): Array<string> {
+    return this.list;
+  }
 }
