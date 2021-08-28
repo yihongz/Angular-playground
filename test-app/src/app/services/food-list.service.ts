@@ -24,12 +24,22 @@ export class FoodListService {
       error => error)
   }
 
-  public foodListAdd(value: string) {
-    this.foodListAlert(value)
-    this.list.push(value);
+  // public foodListAdd(value: string) {
+  //   this.foodListAlert(value)
+  //   this.list.push(value);
+  // }
+  public foodListAdd(value: string): Observable<FoodList> {
+    return this.http.post<FoodList>(`${this.url}/list-food`, { nome: value }).pipe(
+      res => res,
+      error => error
+    )
   }
 
-  public foodListAlert(value: string): void {
+  // public foodListAlert(value: string): void {
+  //   return this.emitEvent.emit(value);
+  // }
+
+  public foodListAlert(value: FoodList): void {
     return this.emitEvent.emit(value);
   }
 }
