@@ -5,13 +5,7 @@ import { FoodListService } from './services/food-list.service';
 @Component({
   selector: 'app-root',
   template: `
-  <!--<ng-template [ngIf]="getDados">
-    <h1>{{getDados.nome}}</h1>
-    <h1>{{getDados.idade}}</h1>
-  </ng-template>
-  <app-output (enviarDados)="setDados($event)"></app-output>-->
-  <app-food-list></app-food-list>
-  <app-food-add></app-food-add>
+  <app-forms></app-forms>
   <router-outlet></router-outlet>`
 })
 export class AppComponent implements OnInit {
