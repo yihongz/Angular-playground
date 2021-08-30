@@ -3,6 +3,20 @@
         Nome:
         <input type="text" name="nome" ngModel>
     </label>
+
+    <br/>
+
+    <label>
+        Masculino
+        <input type="radio" name="sexo" value="Masculino" ngModel>
+    </label>
+    
+    <br/>
+
+    <label>
+        Feminino
+        <input type="radio" name="sexo" value="Feminino" ngModel>
+    </label>
 </form>
 
 {{form.value | json}}
