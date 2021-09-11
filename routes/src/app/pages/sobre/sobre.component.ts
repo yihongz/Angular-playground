@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-sobre',
@@ -8,7 +8,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SobreComponent implements OnInit {
 
-  constructor(private activedRoute: ActivatedRoute) { }
+  constructor(private activedRoute: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.activedRoute.params.subscribe(
@@ -18,6 +19,10 @@ export class SobreComponent implements OnInit {
     this.activedRoute.queryParams.subscribe(
       res => console.log(res)
     )
+
+    setInterval(() => {
+      this.router.navigate(['/']);
+    }, 5000)
   }
 
 }
