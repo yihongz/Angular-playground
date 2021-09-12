@@ -1,4 +1,4 @@
-<app-search (emitSearch)=""></app-search>
+<app-search (emitSearch)="getSearch($event)"></app-search>
 
 <section class="listagem">
     <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
