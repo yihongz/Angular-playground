@@ -22,4 +22,27 @@ describe('BankingComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('(U) getPoupanca(): should poupanca have 10', () => {
+    expect(component.getPoupanca).toEqual(10);
+  });
+
+  it('(U) getCarteira(): should poupanca have 50', () => {
+    expect(component.getCarteira).toEqual(50);
+  });
+
+  it('(U) setSacar(): should transfer poupanca from carteira', () => {
+   component.setSacar('10');
+   fixture.detectChanges(); // De unidade não precisa
+
+   expect(component.getPoupanca).toEqual(0);
+   expect(component.getCarteira).toEqual(60);
+  });
+
+  it('(U) setDepositar(): should transfer carteira from poupanca', () => {
+    component.setDepositar('50');
+ 
+    expect(component.getCarteira).toEqual(0);
+    expect(component.getPoupanca).toEqual(60);
+   });
 });
